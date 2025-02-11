@@ -23,9 +23,12 @@ app.use('/article', newsRouter);
 
 // Error handling middleware (added to catch any issues)
 app.use((err, req, res, next) => {
-  console.error(err.stack);
+  console.error('Error occurred:', err); // Log the error object itself
+  console.error('Request URL:', req.originalUrl); // Log the request URL that triggered the error
+  console.error('Stack trace:', err.stack); // Log the full stack trace for deeper insight
   res.status(500).send('Something went wrong!');
 });
+
 
 // Export the app for Vercel
 module.exports = app;
