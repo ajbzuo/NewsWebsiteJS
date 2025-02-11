@@ -2,7 +2,7 @@
   "name": "nodejs-news",
   "version": "1.0.0",
   "description": "A Node.js Express app for news",
-   "main": "app.js",
+  "main": "app.js",
   "scripts": {
     "start": "node app.js",
     "dev": "nodemon app.js",
@@ -19,9 +19,7 @@
   "devDependencies": {
     "nodemon": "^2.0.4"
   },
-  {
   "engines": {
     "node": ">=18.x"
   }
-}
 }
